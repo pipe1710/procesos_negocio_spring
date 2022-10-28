@@ -16,7 +16,7 @@ import java.util.*;
 
 @RestController
 public class UsuarioController {
-
+//controlador
     @Autowired
     private UsuarioService usuarioService;
 
