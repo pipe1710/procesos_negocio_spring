@@ -2,6 +2,9 @@ package com.procesos.negocio.andres;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 public class ProcesosApplication {
@@ -9,5 +12,9 @@ public class ProcesosApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProcesosApplication.class, args);
 	}
+	@Bean
+	public PasswordEncoder passwordEncoder(){
+		return new BCryptPasswordEncoder();
 
+	}
 }
